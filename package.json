@@ -4,13 +4,13 @@
   "description": "RESTful api Domain Driven Design",
   "main": "index.js",
   "engines": {
-    "node": ">=9",
-    "npm": ">=5"
+    "node": ">= 12",
+    "npm": ">=6"
   },
   "scripts": {
     "gc": "git-cz",
-    "start": "node cluster.js",
-    "start:dev": "nodemon cluster.js",
+    "start": "NODE_PATH=. node cluster.js",
+    "start:dev": "NODE_PATH=. nodemon cluster.js",
     "start:cc": "codecrumbs -d src -e src/container.js",
     "start:docs": "docsify serve docs",
     "test": "standard --verbose | snazzy && npm run db:refresh-test && npm run test:cov",
@@ -46,7 +46,7 @@
   "dependencies": {
     "awilix": "4.2.0",
     "awilix-express": "2.1.1",
-    "bcrypt": "3.0.6",
+    "bcrypt": "3.0.8",
     "body-parser": "1.18.3",
     "compression": "1.7.3",
     "cors": "2.8.5",
@@ -66,7 +66,7 @@
     "pg": "7.8.1",
     "pm2": "3.5.1",
     "ramda": "0.26.1",
-    "sequelize": "5.5.0",
+    "sequelize": "5.21.1",
     "swagger-jsdoc": "3.2.9",
     "tcomb": "3.2.29",
     "winston": "3.2.1"
@@ -86,7 +86,7 @@
     "npm-check": "5.9.0",
     "pre-commit": "1.2.2",
     "semantic-release": "15.13.15",
-    "sequelize-cli": "^5.5.0",
+    "sequelize-cli": "^5.5.1",
     "sinon": "7.2.7",
     "sinon-chai": "3.3.0",
     "snazzy": "^8.0.0",
